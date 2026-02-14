@@ -68,6 +68,7 @@ export default {
         'gradient-shift': 'gradientShift 8s ease infinite',
         'spin-slow': 'spin 20s linear infinite',
         'bounce-subtle': 'bounceSubtle 2s ease-in-out infinite',
+        'scroll': 'scroll 30s linear infinite',
       },
       keyframes: {
         fadeIn: {
@@ -95,6 +96,10 @@ export default {
         bounceSubtle: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-5px)' },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       backdropBlur: {
