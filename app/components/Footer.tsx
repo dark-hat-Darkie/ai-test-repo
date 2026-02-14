@@ -39,6 +39,12 @@ export default function Footer() {
               How It Works
             </a>
             <Link
+              href="/about"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300"
+            >
+              About
+            </Link>
+            <Link
               href="/contact"
               className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300"
             >
