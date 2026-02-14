@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function Footer() {
   return (
     <footer className="relative border-t border-white/5">
@@ -36,6 +38,12 @@ export default function Footer() {
             >
               How It Works
             </a>
+            <Link
+              href="/contact"
+              className="text-sm text-gray-500 hover:text-gray-300 transition-colors duration-300"
+            >
+              Contact
+            </Link>
           </div>
 
           {/* Copyright */}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -47,6 +48,12 @@ export default function Navbar() {
             >
               How It Works
             </a>
+            <Link
+              href="/contact"
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              Contact
+            </Link>
             <a
               href="https://github.com"
               target="_blank"
