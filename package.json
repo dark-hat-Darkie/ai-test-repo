@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx next lint",
+    "lint": "./node_modules/.bin/next lint",
     "test": "node ./node_modules/jest/bin/jest.js"
   },
   "dependencies": {
