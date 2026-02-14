@@ -13,7 +13,8 @@ jest.mock('next/font/google', () => ({
 // Mock next/image
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: Record<string, unknown>) => {
+  default: ({ unoptimized, ...props }: Record<string, unknown>) => {
+    void unoptimized
     // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
     return <img {...props} />
   },
