@@ -1,0 +1,30 @@
+version: "1"
+
+defaults:
+  model: "claude-sonnet-4-5-20250929"
+  reviewerModel: "claude-sonnet-4-5-20250929"
+  maxTurns: 25
+  maxReviewCycles: 3
+  maxTestRetries: 2
+  timeoutMinutes: 30
+  budgetPerTaskUsd: 5.00
+  branchPrefix: "xforce"
+  labels:
+    ready: "xforce:ready"
+    inProgress: "xforce:in-progress"
+    done: "xforce:done"
+    failed: "xforce:failed"
+  allowedTools:
+    - Read
+    - Write
+    - Edit
+    - Bash
+    - Glob
+    - Grep
+
+repos:
+  - owner: "dark-hat-Darkie"
+    name: "ai-test-repo"
+    defaultBranch: "master"
+    testCommand: "npm test"
+    autoMerge: false

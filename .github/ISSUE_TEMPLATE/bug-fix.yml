@@ -1,0 +1,55 @@
+name: "X-Force: Bug Fix"
+description: "Automated bug fix by X-Force"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "Describe the bug. What is happening vs. what should happen?"
+      placeholder: "When a user clicks X, Y happens instead of Z..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: "How do we know the bug is fixed?"
+      value: |
+        - [ ] Bug no longer reproduces when...
+        - [ ] Existing tests still pass
+        - [ ] New regression test added
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-files
+    attributes:
+      label: Affected Files
+      description: "Where does the bug likely live?"
+      placeholder: |
+        - src/api/handler.ts
+    validations:
+      required: false
+
+  - type: textarea
+    id: edge-cases
+    attributes:
+      label: Edge Cases
+      description: "Related scenarios to verify."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      options:
+        - "XS (< 50 lines)"
+        - "S (50-150 lines)"
+        - "M (150-500 lines)"
+        - "L (500-1000 lines)"
+        - "XL (1000+ lines)"
+    validations:
+      required: true

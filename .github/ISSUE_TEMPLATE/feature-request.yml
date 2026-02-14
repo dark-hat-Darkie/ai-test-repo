@@ -1,0 +1,58 @@
+name: "X-Force: Feature Request"
+description: "Automated feature implementation by X-Force"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "What problem does this solve? Background information."
+      placeholder: "Users need the ability to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: "Bullet list of criteria that must be met."
+      value: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-files
+    attributes:
+      label: Affected Files
+      description: "Which files/modules should be modified?"
+      placeholder: |
+        - src/auth/login.ts
+        - src/auth/login.test.ts
+    validations:
+      required: false
+
+  - type: textarea
+    id: edge-cases
+    attributes:
+      label: Edge Cases
+      description: "Edge cases to handle."
+      placeholder: |
+        - What happens if the user is not authenticated?
+        - What if the input is empty?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      options:
+        - "XS (< 50 lines)"
+        - "S (50-150 lines)"
+        - "M (150-500 lines)"
+        - "L (500-1000 lines)"
+        - "XL (1000+ lines)"
+    validations:
+      required: true

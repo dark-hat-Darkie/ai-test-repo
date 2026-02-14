@@ -1,0 +1,53 @@
+name: "X-Force: Refactor"
+description: "Automated refactoring by X-Force"
+labels: ["refactor"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: "Why is this refactoring needed? What's the current problem?"
+      placeholder: "The current implementation of X is hard to maintain because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: "What should the refactored code look like?"
+      value: |
+        - [ ] Code restructured to...
+        - [ ] No behavior changes
+        - [ ] All existing tests pass
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-files
+    attributes:
+      label: Affected Files
+      description: "Which files need refactoring?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: edge-cases
+    attributes:
+      label: Edge Cases
+      description: "Anything that could break during the refactor?"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Estimated Size
+      options:
+        - "XS (< 50 lines)"
+        - "S (50-150 lines)"
+        - "M (150-500 lines)"
+        - "L (500-1000 lines)"
+        - "XL (1000+ lines)"
+    validations:
+      required: true
