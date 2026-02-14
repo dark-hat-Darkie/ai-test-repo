@@ -26,13 +26,13 @@ export const metadata: Metadata = {
       "Automate your entire software development lifecycle with X-Force. Just create GitHub issues, and let our AI handle the rest.",
     type: "website",
   },
-  themeColor: "#0a0a0a",
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
+  themeColor: "#0a0a0a",
 };
 
 export default function RootLayout({
