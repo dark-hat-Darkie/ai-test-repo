@@ -1,54 +1,18 @@
 import Image from 'next/image';
 
 const brands = [
-  {
-    name: 'TechCrunch',
-    logoUrl: 'https://cdn.simpleicons.org/crunchbase/white',
-  },
-  {
-    name: 'The Verge',
-    logoUrl: 'https://cdn.simpleicons.org/theverge/white',
-  },
-  {
-    name: 'Wired',
-    logoUrl: 'https://cdn.simpleicons.org/wired/white',
-  },
-  {
-    name: 'Bloomberg',
-    logoUrl: 'https://cdn.simpleicons.org/bloomberg/white',
-  },
-  {
-    name: 'Reuters',
-    logoUrl: 'https://cdn.simpleicons.org/reuters/white',
-  },
-  {
-    name: 'Forbes',
-    logoUrl: 'https://cdn.simpleicons.org/forbes/white',
-  },
-  {
-    name: 'Ars Technica',
-    logoUrl: 'https://cdn.simpleicons.org/arstechnica/white',
-  },
-  {
-    name: 'CNET',
-    logoUrl: 'https://cdn.simpleicons.org/cnet/white',
-  },
-  {
-    name: 'Mashable',
-    logoUrl: 'https://cdn.simpleicons.org/mashable/white',
-  },
-  {
-    name: 'Hacker News',
-    logoUrl: 'https://cdn.simpleicons.org/ycombinator/white',
-  },
-  {
-    name: 'Product Hunt',
-    logoUrl: 'https://cdn.simpleicons.org/producthunt/white',
-  },
-  {
-    name: 'GitHub',
-    logoUrl: 'https://cdn.simpleicons.org/github/white',
-  },
+  { name: 'TechCrunch', logo: '/brands/techcrunch.svg' },
+  { name: 'GitHub', logo: '/brands/github.svg' },
+  { name: 'Vercel', logo: '/brands/vercel.svg' },
+  { name: 'Docker', logo: '/brands/docker.svg' },
+  { name: 'Stripe', logo: '/brands/stripe.svg' },
+  { name: 'Shopify', logo: '/brands/shopify.svg' },
+  { name: 'GitLab', logo: '/brands/gitlab.svg' },
+  { name: 'Reddit', logo: '/brands/reddit.svg' },
+  { name: 'Product Hunt', logo: '/brands/producthunt.svg' },
+  { name: 'Stack Overflow', logo: '/brands/stackoverflow.svg' },
+  { name: 'Ars Technica', logo: '/brands/arstechnica.svg' },
+  { name: 'CNET', logo: '/brands/cnet.svg' },
 ];
 
 export default function BrandScroller() {
@@ -61,13 +25,13 @@ export default function BrandScroller() {
         {/* Section header */}
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-ai-purple-400 tracking-widest uppercase mb-4">
-            Featured In
+            Industry Leaders
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-            Trusted by Leading Brands
+            Powering Modern Development
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Recognized and featured across top technology and news platforms
+            Built for teams that rely on the best tools in the industry
           </p>
         </div>
 
@@ -82,12 +46,11 @@ export default function BrandScroller() {
               >
                 <div className="glass rounded-xl px-6 py-4 flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
                   <Image
-                    src={brand.logoUrl}
+                    src={brand.logo}
                     alt={brand.name}
                     width={24}
                     height={24}
                     className="w-6 h-6"
-                    unoptimized
                   />
                   <span className="text-gray-400 group-hover:text-white font-medium text-sm whitespace-nowrap transition-colors duration-300">
                     {brand.name}
@@ -103,12 +66,11 @@ export default function BrandScroller() {
               >
                 <div className="glass rounded-xl px-6 py-4 flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
                   <Image
-                    src={brand.logoUrl}
+                    src={brand.logo}
                     alt={brand.name}
                     width={24}
                     height={24}
                     className="w-6 h-6"
-                    unoptimized
                   />
                   <span className="text-gray-400 group-hover:text-white font-medium text-sm whitespace-nowrap transition-colors duration-300">
                     {brand.name}
