@@ -1,1 +1,10 @@
-{}
+{
+  "name": "ai-test-repo",
+  "version": "1.0.0",
+  "description": "Test repository for X-Force pipeline",
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 0",
+    "build": "echo \"No build step\" && exit 0",
+    "lint": "echo \"No lint step\" && exit 0"
+  }
+}
