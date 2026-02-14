@@ -2,8 +2,8 @@ export default function AboutMission() {
   return (
     <section className="relative py-24 md:py-32 bg-[#0a0a0a] overflow-hidden">
       {/* Background orbs */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-ai-purple-600/5 blur-[100px]" />
-      <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full bg-ai-cyan-600/5 blur-[80px]" />
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full bg-ai-purple-600/5 blur-[100px]" />
+      <div className="absolute bottom-0 left-0 w-[150px] h-[150px] md:w-[300px] md:h-[300px] rounded-full bg-ai-cyan-600/5 blur-[80px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -40,7 +40,7 @@ export default function AboutMission() {
           </div>
 
           {/* Right: Highlights card */}
-          <div className="glass-card rounded-2xl p-8">
+          <div className="glass-card rounded-2xl p-6 md:p-8">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg btn-gradient flex items-center justify-center flex-shrink-0">

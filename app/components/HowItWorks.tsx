@@ -29,7 +29,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="relative py-24 md:py-32 bg-[#0a0a0a] overflow-hidden">
       {/* Background orbs */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-ai-cyan-600/5 blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-ai-cyan-600/5 blur-[120px]" />
       <div className="absolute top-0 right-1/4 w-[300px] h-[300px] rounded-full bg-ai-purple-600/5 blur-[80px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,8 +56,8 @@ export default function HowItWorks() {
               {/* Step number circle */}
               <div className="flex justify-center mb-8">
                 <div className="relative">
-                  <div className="w-16 h-16 rounded-full btn-gradient flex items-center justify-center glow-sm group-hover:glow transition-shadow duration-500">
-                    <span className="text-xl font-bold text-white">{step.number}</span>
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full btn-gradient flex items-center justify-center glow-sm group-hover:glow transition-shadow duration-500">
+                    <span className="text-lg md:text-xl font-bold text-white">{step.number}</span>
                   </div>
                   {/* Pulse ring */}
                   <div className="absolute inset-0 rounded-full btn-gradient opacity-0 group-hover:opacity-30 animate-ping" style={{ animationDuration: '2s' }} />
@@ -65,7 +65,7 @@ export default function HowItWorks() {
               </div>
 
               {/* Card */}
-              <div className="glass-card rounded-2xl p-6 text-center">
+              <div className="glass-card rounded-2xl p-5 md:p-6 text-center">
                 <h3 className="text-lg font-semibold text-white mb-3">
                   {step.title}
                 </h3>

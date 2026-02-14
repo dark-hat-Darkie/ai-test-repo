@@ -10,6 +10,11 @@ jest.mock('next/font/google', () => ({
   }),
 }))
 
+// Mock next/navigation
+jest.mock('next/navigation', () => ({
+  usePathname: () => '/',
+}))
+
 // Mock next/image
 jest.mock('next/image', () => ({
   __esModule: true,

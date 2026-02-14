@@ -15,7 +15,7 @@ export default function ContactPage() {
       <Navbar />
 
       <main>
-        <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
+        <section className="relative pt-24 pb-16 md:pt-40 md:pb-32">
           {/* Background effects */}
           <div className="absolute inset-0 bg-gradient-section" />
           <div className="absolute top-1/4 -left-32 w-64 h-64 bg-ai-purple-500/10 rounded-full blur-3xl" />
@@ -35,7 +35,7 @@ export default function ContactPage() {
             {/* Two-column layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {/* Left: Contact Form */}
-              <div className="glass-card rounded-2xl p-8">
+              <div className="glass-card rounded-2xl p-6 md:p-8">
                 <h2 className="text-2xl font-semibold text-white mb-6">
                   Send us a message
                 </h2>

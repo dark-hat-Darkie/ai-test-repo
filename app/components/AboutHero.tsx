@@ -1,11 +1,11 @@
 export default function AboutHero() {
   return (
-    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
+    <section className="relative pt-24 pb-16 md:pt-40 md:pb-32 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-section" />
       <div className="absolute top-1/4 -left-32 w-64 h-64 bg-ai-purple-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-ai-cyan-500/10 rounded-full blur-3xl" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-ai-blue-500/5 blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-ai-blue-500/5 blur-[120px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">

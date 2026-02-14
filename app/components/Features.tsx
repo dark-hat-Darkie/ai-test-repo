@@ -59,7 +59,7 @@ export default function Features() {
   return (
     <section id="features" className="relative py-24 md:py-32 bg-gradient-section overflow-hidden">
       {/* Background orb */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full bg-ai-purple-600/5 blur-[100px]" />
+      <div className="absolute top-0 right-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full bg-ai-purple-600/5 blur-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -80,7 +80,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl p-8 group"
+              className="glass-card rounded-2xl p-6 md:p-8 group"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl btn-gradient flex items-center justify-center text-white mb-6 group-hover:glow-sm transition-shadow duration-300">

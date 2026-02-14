@@ -19,7 +19,7 @@ export default function BrandScroller() {
   return (
     <section id="brands" className="relative py-16 md:py-20 bg-[#0a0a0a] overflow-hidden">
       {/* Background orb */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] rounded-full bg-ai-purple-600/5 blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[100px] md:w-[600px] md:h-[200px] rounded-full bg-ai-purple-600/5 blur-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -42,9 +42,9 @@ export default function BrandScroller() {
             {brands.map((brand) => (
               <div
                 key={`first-${brand.name}`}
-                className="flex-shrink-0 mx-8 md:mx-12 flex items-center justify-center group"
+                className="flex-shrink-0 mx-4 md:mx-8 lg:mx-12 flex items-center justify-center group"
               >
-                <div className="glass rounded-xl px-6 py-4 flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                <div className="glass rounded-xl px-4 py-3 md:px-6 md:py-4 flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
                   <Image
                     src={brand.logo}
                     alt={brand.name}
@@ -52,7 +52,7 @@ export default function BrandScroller() {
                     height={24}
                     className="w-6 h-6"
                   />
-                  <span className="text-gray-400 group-hover:text-white font-medium text-sm whitespace-nowrap transition-colors duration-300">
+                  <span className="text-gray-400 group-hover:text-white font-medium text-sm whitespace-nowrap transition-colors duration-300 hidden sm:inline">
                     {brand.name}
                   </span>
                 </div>
@@ -62,9 +62,9 @@ export default function BrandScroller() {
             {brands.map((brand) => (
               <div
                 key={`second-${brand.name}`}
-                className="flex-shrink-0 mx-8 md:mx-12 flex items-center justify-center group"
+                className="flex-shrink-0 mx-4 md:mx-8 lg:mx-12 flex items-center justify-center group"
               >
-                <div className="glass rounded-xl px-6 py-4 flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
+                <div className="glass rounded-xl px-4 py-3 md:px-6 md:py-4 flex items-center gap-3 opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300">
                   <Image
                     src={brand.logo}
                     alt={brand.name}
@@ -72,7 +72,7 @@ export default function BrandScroller() {
                     height={24}
                     className="w-6 h-6"
                   />
-                  <span className="text-gray-400 group-hover:text-white font-medium text-sm whitespace-nowrap transition-colors duration-300">
+                  <span className="text-gray-400 group-hover:text-white font-medium text-sm whitespace-nowrap transition-colors duration-300 hidden sm:inline">
                     {brand.name}
                   </span>
                 </div>

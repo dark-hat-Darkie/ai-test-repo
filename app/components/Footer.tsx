@@ -91,14 +91,14 @@ export default function Footer() {
           {/* Column 4: Connect / Social */}
           <div>
             <h3 className="text-sm font-semibold text-gradient mb-4">Connect</h3>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               {/* GitHub */}
               <a
                 href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300 p-2"
               >
                 <svg
                   width="20"
@@ -117,7 +117,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Twitter"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300 p-2"
               >
                 <svg
                   width="20"
@@ -136,7 +136,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300 p-2"
               >
                 <svg
                   width="20"
@@ -155,7 +155,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Discord"
-                className="text-gray-400 hover:text-white transition-colors duration-300"
+                className="text-gray-400 hover:text-white transition-colors duration-300 p-2"
               >
                 <svg
                   width="20"
