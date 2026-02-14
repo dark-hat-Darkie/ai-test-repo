@@ -49,6 +49,12 @@ export default function Navbar() {
               How It Works
             </a>
             <Link
+              href="/about"
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              About
+            </Link>
+            <Link
               href="/contact"
               className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
             >
