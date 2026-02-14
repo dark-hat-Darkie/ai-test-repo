@@ -17,22 +17,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-
-      - name: Install X-Force
-        run: npm install -g x-force@latest
-
-      - name: Install Claude Code CLI
-        run: npm install -g @anthropic-ai/claude-code
-
       - name: Run X-Force Pipeline
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          xforce run \
-            --repo "your-org/ai-test-repo" \
-            --issue-number "${{ github.event.issue.number }}"
+        uses: dark-hat-Darkie/x-force/actions/run-pipeline@main
+        with:
+          issue_number: ${{ github.event.issue.number }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
