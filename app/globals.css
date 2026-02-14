@@ -40,6 +40,41 @@ html {
   background: linear-gradient(180deg, #a78bfa, #22d3ee);
 }
 
+/* Mobile menu styles */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  top: 64px;
+  z-index: 40;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.mobile-menu-panel {
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @layer components {
   .glass {
     background: rgba(255, 255, 255, 0.03);
@@ -167,5 +202,10 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .animate-scroll {
     animation-play-state: paused !important;
+  }
+
+  .mobile-menu-overlay,
+  .mobile-menu-panel {
+    animation: none !important;
   }
 }

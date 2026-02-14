@@ -61,7 +61,7 @@ export default function TeamBentoGrid() {
   return (
     <section className="relative py-24 md:py-32 bg-[#0a0a0a] overflow-hidden">
       {/* Background orbs */}
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-ai-cyan-600/5 blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full bg-ai-cyan-600/5 blur-[120px]" />
       <div className="absolute top-0 right-1/4 w-[300px] h-[300px] rounded-full bg-ai-purple-600/5 blur-[80px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -93,7 +93,7 @@ export default function TeamBentoGrid() {
               <div className={`flex ${member.featured ? 'flex-col h-full' : 'flex-col'}`}>
                 {/* Avatar */}
                 <div className={`${
-                  member.featured ? 'w-20 h-20 text-2xl' : 'w-14 h-14 text-lg'
+                  member.featured ? 'w-16 h-16 md:w-20 md:h-20 text-xl md:text-2xl' : 'w-12 h-12 md:w-14 md:h-14 text-base md:text-lg'
                 } rounded-full btn-gradient flex items-center justify-center text-white font-bold mb-4 group-hover:glow-sm transition-shadow duration-300`}>
                   {member.initials}
                 </div>
@@ -101,7 +101,7 @@ export default function TeamBentoGrid() {
                 {/* Info */}
                 <div className={member.featured ? 'flex-1 flex flex-col' : ''}>
                   <h3 className={`${
-                    member.featured ? 'text-2xl' : 'text-lg'
+                    member.featured ? 'text-xl md:text-2xl' : 'text-base md:text-lg'
                   } font-semibold text-white mb-1`}>
                     {member.name}
                   </h3>

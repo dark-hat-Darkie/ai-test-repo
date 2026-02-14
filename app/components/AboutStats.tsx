@@ -25,7 +25,7 @@ export default function AboutStats() {
   return (
     <section className="relative py-24 md:py-32 bg-gradient-section overflow-hidden">
       {/* Background orb */}
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-ai-cyan-600/5 blur-[100px]" />
+      <div className="absolute bottom-0 right-0 w-[200px] h-[200px] md:w-[400px] md:h-[400px] rounded-full bg-ai-cyan-600/5 blur-[100px]" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -46,15 +46,15 @@ export default function AboutStats() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="glass-card rounded-2xl p-6 text-center group"
+              className="glass-card rounded-2xl p-4 md:p-6 text-center group"
             >
               <div className="text-3xl md:text-4xl font-bold mb-2">
                 <span className="text-gradient-vivid">{stat.number}</span>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-1">
+              <h3 className="text-base md:text-lg font-semibold text-white mb-1">
                 {stat.label}
               </h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-xs md:text-sm">
                 {stat.description}
               </p>
             </div>
