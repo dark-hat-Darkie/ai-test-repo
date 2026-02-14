@@ -10,6 +10,15 @@ jest.mock('next/font/google', () => ({
   }),
 }))
 
+// Mock next/image
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props: Record<string, unknown>) => {
+    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    return <img {...props} />
+  },
+}))
+
 describe('Home Page', () => {
   it('renders without errors', () => {
     render(<Home />)
@@ -26,6 +35,13 @@ describe('Home Page', () => {
     render(<Home />)
     expect(
       screen.getByRole('heading', { name: /automate your entire/i })
+    ).toBeInTheDocument()
+  })
+
+  it('renders the Brand Scroller section', () => {
+    render(<Home />)
+    expect(
+      screen.getByRole('heading', { name: /powering modern development/i })
     ).toBeInTheDocument()
   })
 

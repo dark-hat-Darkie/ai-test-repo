@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import BrandScroller from './components/BrandScroller';
 import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import CTA from './components/CTA';
@@ -11,6 +12,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <BrandScroller />
         <Features />
         <HowItWorks />
         <CTA />
