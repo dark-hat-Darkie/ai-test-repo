@@ -1,39 +1,73 @@
 import { render, screen } from '@testing-library/react'
 import Home from '../page'
 
+// Mock next/font/google
+jest.mock('next/font/google', () => ({
+  Inter: () => ({
+    className: 'inter-mock',
+    variable: '--font-inter',
+    style: { fontFamily: 'Inter' },
+  }),
+}))
+
 describe('Home Page', () => {
   it('renders without errors', () => {
     render(<Home />)
     expect(screen.getByRole('main')).toBeInTheDocument()
   })
 
-  it('displays the welcome heading', () => {
+  it('renders the navigation with X-Force branding', () => {
     render(<Home />)
-    expect(screen.getByRole('heading', { name: /welcome to ai test repo/i })).toBeInTheDocument()
+    expect(screen.getByRole('navigation')).toBeInTheDocument()
+    expect(screen.getAllByText('X-Force').length).toBeGreaterThan(0)
   })
 
-  it('displays the description text', () => {
+  it('renders the hero headline', () => {
     render(<Home />)
-    expect(screen.getByText(/next\.js app with typescript and tailwind css/i)).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /automate your entire/i })
+    ).toBeInTheDocument()
   })
 
-  it('has a link to Next.js documentation', () => {
+  it('renders the Features section', () => {
     render(<Home />)
-    const docsLink = screen.getByRole('link', { name: /read the docs/i })
-    expect(docsLink).toBeInTheDocument()
-    expect(docsLink).toHaveAttribute('href', 'https://nextjs.org/docs')
-    expect(docsLink).toHaveAttribute('target', '_blank')
+    expect(
+      screen.getByRole('heading', { name: /powerful features/i })
+    ).toBeInTheDocument()
   })
 
-  it('has a link to GitHub', () => {
+  it('renders the How It Works section', () => {
     render(<Home />)
-    const githubLink = screen.getByRole('link', { name: /view on github/i })
-    expect(githubLink).toBeInTheDocument()
-    expect(githubLink).toHaveAttribute('href', 'https://github.com')
-    expect(githubLink).toHaveAttribute('target', '_blank')
+    expect(
+      screen.getByRole('heading', { name: /how it works/i })
+    ).toBeInTheDocument()
   })
 
-  it('applies Tailwind CSS classes correctly', () => {
+  it('renders the CTA section', () => {
+    render(<Home />)
+    expect(
+      screen.getByRole('heading', { name: /ready to automate/i })
+    ).toBeInTheDocument()
+  })
+
+  it('renders the footer', () => {
+    render(<Home />)
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
+  })
+
+  it('has GitHub links', () => {
+    render(<Home />)
+    const githubLinks = screen.getAllByRole('link', { name: /github/i })
+    expect(githubLinks.length).toBeGreaterThan(0)
+  })
+
+  it('has Get Started links', () => {
+    render(<Home />)
+    const getStartedLinks = screen.getAllByRole('link', { name: /get started/i })
+    expect(getStartedLinks.length).toBeGreaterThan(0)
+  })
+
+  it('wraps content in a min-h-screen container', () => {
     render(<Home />)
     const container = screen.getByRole('main').parentElement
     expect(container).toHaveClass('min-h-screen')
